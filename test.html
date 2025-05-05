@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Blog!</h1>
+    <nav>
+      <a href="/what">What?</a>
+      <a href="/feed.rss">Feedme</a>
+    </nav>
+  </header>
+
+  <main>
+    {{#posts}}
+      {{#first}}
+        <article>
+          {{#title}}<h2 class="subtitle">{{title}}</h2>{{/title}}
+          {{{body}}}
+        </article>
+      {{/first}}
+    {{/posts}}
+  </main>
+
+  <footer>
+    <p>Gregory Greif © 2022–2025</p>
+  </footer>
+</body>
+</html>
+
